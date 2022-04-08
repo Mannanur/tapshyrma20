@@ -6,12 +6,12 @@ public class Main {
     try  {
         drive();
     } catch (Exception e) {
-        e.printStackTrace();
+        System.out.println(e.getMessage());
     }
-    try  {
-       Car.close();
+    try (Car car = new Car()) {
+       Car.cloce();
     } catch (Exception e) {
-            e.printStackTrace();
+        System.out.println(e.getMessage());
         }
 
 

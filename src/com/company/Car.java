@@ -1,9 +1,15 @@
 package com.company;
 
-public class Car {
+public class Car implements AutoCloseable{
 
 
-   static void close() throws Exception{
+   public static void cloce() throws Exception{
         System.out.println("Mashina jabylyp jatat");
+    }
+
+
+    @Override
+    public void close() throws Exception {
+
     }
 }
